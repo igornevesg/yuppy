@@ -34,7 +34,7 @@
             axilInit.marqueImages();
             axilInit.axilHover();
             axilInit.onePageTopFixed();
-           
+
         },
 
         w: function(e) {
@@ -117,7 +117,7 @@
 
             function resizeClassAdd() {
                 if (window.matchMedia('(max-width: 991px)').matches) {
-                    $('.main-wrapper').on('click','.menu-item-has-children a', function(e) {
+                    $('.main-wrapper').on('click', '.menu-item-has-children a', function(e) {
 
                         var targetParent = $(this).parents('.mainmenu-nav'),
                             target = $(this).siblings('.axil-submenu'),
@@ -128,12 +128,12 @@
                         $(targetSiblings).slideUp(400);
 
                         $(this).parent('.menu-item-has-children').toggleClass('open');
-                        
+
                     });
                     $('#mobilemenu-popup').addClass('offcanvas');
-                }else {
+                } else {
                     $('#mobilemenu-popup').removeClass('offcanvas');
-                    
+
                 }
             }
 
@@ -147,16 +147,16 @@
             });
         },
 
-        axilMasonary: function () {
-            $('.axil-isotope-wrapper').imagesLoaded(function () {
+        axilMasonary: function() {
+            $('.axil-isotope-wrapper').imagesLoaded(function() {
                 // filter items on button click
-                $('.isotope-button').on('click', 'button', function () {
+                $('.isotope-button').on('click', 'button', function() {
                     var filterValue = $(this).attr('data-filter');
                     $grid.isotope({
                         filter: filterValue
                     });
                 });
-                
+
                 // init Isotope
                 var $grid = $('.isotope-list').isotope({
                     itemSelector: '.project',
@@ -169,8 +169,8 @@
                     }
                 });
             });
-        
-            $('.isotope-button button').on('click', function (event) {
+
+            $('.isotope-button button').on('click', function(event) {
                 $(this).siblings('.is-checked').removeClass('is-checked');
                 $(this).addClass('is-checked');
                 event.preventDefault();
@@ -179,7 +179,7 @@
             // Masonry
             var galleryIsoContainer = $('#no-equal-gallery');
             if (galleryIsoContainer.length) {
-                var blogGallerIso = galleryIsoContainer.imagesLoaded(function () {
+                var blogGallerIso = galleryIsoContainer.imagesLoaded(function() {
                     blogGallerIso.isotope({
                         itemSelector: '.no-equal-item',
                         masonry: {
@@ -190,15 +190,15 @@
             }
         },
 
-        counterUp: function () {
-			var _counter = $('.count');
-			if (_counter.length) {
-				_counter.counterUp({
-					delay: 10,
-					time: 1000,
-					triggerOnce: true
-				});
-			}
+        counterUp: function() {
+            var _counter = $('.count');
+            if (_counter.length) {
+                _counter.counterUp({
+                    delay: 10,
+                    time: 1000,
+                    triggerOnce: true
+                });
+            }
         },
 
         axilSlickActivation: function(e) {
@@ -232,8 +232,8 @@
                 });
             }
         },
-        
-        tiltAnimation: function () {
+
+        tiltAnimation: function() {
             var _tiltAnimation = $('.paralax-image');
             if (_tiltAnimation.length) {
                 _tiltAnimation.tilt({
@@ -247,26 +247,26 @@
             }
         },
 
-        menuLinkActive: function () {
+        menuLinkActive: function() {
             var currentPage = location.pathname.split("/"),
-                current = currentPage[currentPage.length-1];
-            $('.mainmenu li a, .main-navigation li a').each(function(){
+                current = currentPage[currentPage.length - 1];
+            $('.mainmenu li a, .main-navigation li a').each(function() {
                 var $this = $(this);
-                if($this.attr('href') === current){
+                if ($this.attr('href') === current) {
                     $this.addClass('active');
                     $this.parents('.menu-item-has-children').addClass('menu-item-open')
                 }
             });
         },
 
-        audioPlayerActivation: function () {
+        audioPlayerActivation: function() {
             GreenAudioPlayer.init({
                 selector: '.green-player',
                 stopOthersOnPlay: true
             })
         },
 
-        onePageNav: function () {
+        onePageNav: function() {
             $('#onepagenav').onePageNav({
                 currentClass: 'current',
                 changeHash: false,
@@ -277,13 +277,13 @@
             });
         },
 
-        pricingPlan: function () {
+        pricingPlan: function() {
             var yearlySelectBtn = $('#yearly-plan-btn'),
                 monthlySelectBtn = $('#monthly-plan-btn'),
                 monthlyPrice = $('.monthly-pricing'),
                 yearlyPrice = $('.yearly-pricing'),
                 buttonSlide = $('#pricing-checkbox');
-            
+
             $(monthlySelectBtn).on('click', function() {
                 buttonSlide.prop('checked', true);
                 $(this).addClass('active').parent('.nav-item').siblings().children().removeClass('active');
@@ -291,7 +291,7 @@
                 yearlyPrice.css('display', 'none');
 
             });
-            
+
             $(yearlySelectBtn).on('click', function() {
                 buttonSlide.prop('checked', false);
                 $(this).addClass('active').parent('.nav-item').siblings().children().removeClass('active');
@@ -306,48 +306,48 @@
                     monthlyPrice.css('display', 'block');
                     yearlyPrice.css('display', 'none');
 
-                }else {
+                } else {
                     yearlySelectBtn.addClass('active');
                     monthlySelectBtn.removeClass('active');
                     monthlyPrice.css('display', 'none');
                     yearlyPrice.css('display', 'block');
-                    
+
                 }
             });
         },
 
-        marqueImages: function () {
-            $('.marque-images').each(function () {
+        marqueImages: function() {
+            $('.marque-images').each(function() {
                 var t = 0;
                 var i = 1;
                 var $this = $(this);
-                setInterval(function () {
+                setInterval(function() {
                     t += i;
                     $this.css('background-position-x', -t + 'px');
                 }, 10);
             });
         },
 
-        axilHover : function () {
+        axilHover: function() {
             $('.services-grid, .counterup-progress, .testimonial-grid, .pricing-table, .brand-grid, .blog-list, .about-quality, .team-grid, .splash-hover-control').mouseenter(function() {
                 var self = this;
                 setTimeout(function() {
                     $('.services-grid.active, .counterup-progress.active, .testimonial-grid.active, .pricing-table.active, .brand-grid.active, .blog-list.active, .about-quality.active, .team-grid.active, .splash-hover-control.active').removeClass('active');
                     $(self).addClass('active');
                 }, 0);
-                
+
             });
         },
 
-        onePageTopFixed : function () {
+        onePageTopFixed: function() {
             if ($('.onepagefixed').length) {
                 var fixedElem = $('.onepagefixed'),
                     distance = fixedElem.offset().top - 100,
                     $window = $(window),
                     totalDistance = $('.service-scroll-navigation-area').outerHeight() + distance;
 
-                $(window).on('scroll', function () {
-                    if ( $window.scrollTop() >= distance ) {
+                $(window).on('scroll', function() {
+                    if ($window.scrollTop() >= distance) {
                         fixedElem.css({
                             position: 'fixed',
                             left: '0',
@@ -355,11 +355,11 @@
                             top: '0',
                             zIndex: '5'
                         });
-                    }else {
+                    } else {
                         fixedElem.removeAttr('style');
                     }
 
-                    if ($window.scrollTop() >= totalDistance ) {
+                    if ($window.scrollTop() >= totalDistance) {
                         fixedElem.removeAttr('style');
                     }
                 });
