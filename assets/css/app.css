@@ -10215,3 +10215,7 @@ Pagination
         display: none !important;
     }
 }
+
+.mid-button {
+    text-align: center;
+}
