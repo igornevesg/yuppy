@@ -67,7 +67,7 @@ STYLESHEET INDEXING
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 :root {
-    --color-primary: #5956E9;
+    --color-primary: #C82D63;
     --color-white: #ffffff;
     --color-black: #000000;
     --color-light: #ECF2F6;
@@ -75,8 +75,8 @@ STYLESHEET INDEXING
     --color-text-dark: #292930;
     --color-accent1: #FFDC60;
     --color-accent2: #FAB8C4;
-    --color-blue-shade: #6865FF;
-    --color-link: #2522BA;
+    --color-blue-shade: #ED699C;
+    --color-link: #7A1C3D;
     --color-mabel: #DBF8FF;
     --color-fog: #DBDEFF;
     --color-pink-shade: #FFD3DB;
@@ -285,7 +285,7 @@ h6 {
     font-family: var(--font-primary);
     font-weight: 500;
     letter-spacing: -0.025em;
-    color: var(--color-text-dark);
+    color: #7A1C3D;
 }
 
 h1,
@@ -831,7 +831,7 @@ input {
 }
 
 .breadcrumb-banner .section-heading .title {
-    color: #000248;
+    color: #7A1C3D;
     width: 55%;
     margin-bottom: 40px;
 }
@@ -1058,9 +1058,9 @@ input {
 }
 
 .axil-btn.btn-fill-primary {
-    background-color: var(--color-primary);
+    background-color: #C82D63;
     color: var(--color-white);
-    border: 1px solid var(--color-primary);
+    border: 1px solid #C82D63;
     overflow: hidden;
 }
 
@@ -2842,7 +2842,7 @@ Pagination
 
 .banner .banner-content .axil-btn {
     padding: 28px 45px;
-    box-shadow: 0 44px 84px -24px #5956e9;
+    box-shadow: 0 44px 84px -24px #C82D63;
 }
 
 @media only screen and (max-width: 991px) {
