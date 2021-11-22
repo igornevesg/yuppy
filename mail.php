@@ -35,10 +35,10 @@ if ($name == "") {
 
     $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    $headers .= 'From:  Yuppy <contact@example.com>' . "\r\n";
-    $headers .= 'cc: contact@example.com' . "\r\n";
-    $headers .= 'bcc: contact@example.com' . "\r\n";
-    mail($to, $subject, $_message, $headers, '-f contact@example.com');
+    $headers .= 'From:  Yuppy <igornevesmoc@gmail.com>' . "\r\n";
+    $headers .= 'cc: igornevesmoc@gmail.com' . "\r\n";
+    $headers .= 'bcc: igornevesmoc@gmail.com' . "\r\n";
+    mail($to, $subject, $_message, $headers, '-f igornevesmoc@gmail.com');
 
     $msg['success'] = "\n Email has been sent successfully.";
     $msg['code'] = TRUE;
