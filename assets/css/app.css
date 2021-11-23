@@ -640,6 +640,10 @@ input {
     background-color: var(--color-light);
 }
 
+.bg-color-peach {
+    background-color: var(--color-peach);
+}
+
 .bg-color-mercury {
     background-color: var(--color-mercury);
 }
