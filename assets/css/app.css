@@ -6768,19 +6768,27 @@ Pagination
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     .axil-header.header-style-2 .axil-mainmenu {
-        padding: 35px 15px;
+        padding: 15px 15px;
     }
 }
 
 @media only screen and (max-width: 1199px) {
     .axil-header.header-style-2 .axil-mainmenu {
-        padding: 35px 15px;
+        padding: 15px 15px;
     }
 }
 
 @media only screen and (max-width: 575px) {
     .axil-header.header-style-2 .axil-mainmenu {
-        padding: 30px 0;
+        padding: 15px 0;
+    }
+    .light-version-logo {
+        width: 100px !important;
+        height: 50px !important;
+    }
+    .light-mode img {
+        width: 100px !important;
+        height: 50px !important;
     }
 }
 
@@ -6910,20 +6918,20 @@ Pagination
 }
 
 .axil-mainmenu {
-    padding: 50px 0;
+    padding: 20px 0;
     -webkit-transition: var(--transition);
     transition: var(--transition);
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
     .axil-mainmenu {
-        padding: 35px 0;
+        padding: 15px 0;
     }
 }
 
 @media only screen and (max-width: 1199px) {
     .axil-mainmenu {
-        padding: 30px 0;
+        padding: 15px 0;
     }
 }
 
