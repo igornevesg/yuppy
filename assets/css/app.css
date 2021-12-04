@@ -6782,13 +6782,8 @@ Pagination
     .axil-header.header-style-2 .axil-mainmenu {
         padding: 15px 0;
     }
-    .light-version-logo {
-        width: 100px !important;
-        height: 50px !important;
-    }
-    .light-mode img {
-        width: 100px !important;
-        height: 50px !important;
+    .axil-header .header-navbar .header-logo img {
+        width: 120px;
     }
 }
 
