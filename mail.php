@@ -1,31 +1,39 @@
 <?php
-$name = trim($_POST['contact-name']);
-$email = trim($_POST['contact-email']);
-$company = trim($_POST['contact-company']);
-$message = trim($_POST['contact-message']);
+
+if(isset($_POST['contact-email']) && !empty($_POST['contact-email'])) {
+
+$name = addslashes($_POST['contact-name']);
+$email = addslashes($_POST['contact-email']);
+$company = addslashes($_POST['contact-wpp']);
+$message = addslashes($_POST['contact-message']);
 if ($name == "") {
-    $msg['err'] = "\n Name can not be empty!";
+    $msg['err'] = "\n Digite um Nome!";
     $msg['field'] = "contact-name";
     $msg['code'] = FALSE;
 } else if ($email == "") {
-    $msg['err'] = "\n Email can not be empty!";
+    $msg['err'] = "\n Digite um E-mail";
     $msg['field'] = "contact-email";
     $msg['code'] = FALSE;
 } else if ($company == "") {
-    $msg['err'] = "\n Company Name can not be empty!";
+    $msg['err'] = "\n Digite seu Whatsapp";
     $msg['field'] = "contact-company";
     $msg['code'] = FALSE;
 } else if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-    $msg['err'] = "\n Please put a valid email address!";
+    $msg['err'] = "\n Digite um e-mail válido";
     $msg['field'] = "contact-email";
     $msg['code'] = FALSE;
 } else if ($message == "") {
-    $msg['err'] = "\n Message can not be empty!";
+    $msg['err'] = "\n Digite algum serviço";
     $msg['field'] = "contact-message";
     $msg['code'] = FALSE;
 } else {
     $to = 'igornevesmoc@gmail.com';
-    $subject = 'Abstrak Contact Query';
+    $subject = 'Formulário Site';
+    $body = "Nome: ".$name. "\n"
+            "E-mail: ".$email. "\n"
+            "Whatsapp: ".$company. "\n"
+            "Mensagem: ".$message. "\n"
+    $header = "From:"        
     $_message = '<html><head></head><body>';
     $_message .= '<p>Name: ' . $name . '</p>';
     $_message .= '<p>Email: ' . $email . '</p>';
@@ -43,4 +51,7 @@ if ($name == "") {
     $msg['success'] = "\n Email has been sent successfully.";
     $msg['code'] = TRUE;
 }
+}
 echo json_encode($msg);
+
+?>
