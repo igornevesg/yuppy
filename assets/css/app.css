@@ -10254,6 +10254,28 @@ Pagination
     z-index: 9999999999999999 !important;
 }
 
+.wpp-button-2 {
+    display: inline-block;
+    position: relative;
+    bottom: 48px;
+    padding: 18px 32px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    background: #C82D63;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 9999999999999999 !important;
+}
+
 .wpp-button a {
     color: black
 }
@@ -10268,8 +10290,39 @@ Pagination
     }
 }
 
+@media (max-width: 991px) {
+    .wpp-button-2 {
+        width: 460px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wpp-button-2 {
+        width: 450px;
+    }
+}
+
+@media (max-width: 540px) {
+    .wpp-button-2 {
+        width: 100%;
+    }
+}
+
 @media (max-width: 460px) {
     .wpp-button {
         width: 100%;
     }
+}
+
+@media (max-width: 390px) {
+    .wpp-button {
+        width: 300px;
+    }
+    .wpp-button-2 {
+        width: 300px;
+    }
+}
+
+.eapps-form-header-title {
+    color: #C82D63
 }
